@@ -6,7 +6,7 @@
 Summary:	Cryptography Primitives sink
 Name:		ghc-%{pkgname}
 Version:	0.26
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 #Source0Download: http://hackage.haskell.org/package/cryptonite
@@ -68,6 +68,9 @@ kiedy potrzebujemy systemu profilującego z GHC.
 %build
 runhaskell Setup.hs configure -v2 \
 	%{?with_prof:--enable-library-profiling} \
+%ifarch x32
+	--flags="-integer-gmp" \
+%endif
 	--prefix=%{_prefix} \
 	--libdir=%{_libdir} \
 	--libexecdir=%{_libexecdir} \

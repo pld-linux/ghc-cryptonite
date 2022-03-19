@@ -6,7 +6,7 @@
 Summary:	Cryptography Primitives sink
 Name:		ghc-%{pkgname}
 Version:	0.26
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages
 #Source0Download: http://hackage.haskell.org/package/cryptonite
